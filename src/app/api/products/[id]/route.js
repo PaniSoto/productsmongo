@@ -26,6 +26,7 @@ export async function PUT(request, { params }) {
     const results = await collection.updateOne({ _id: new ObjectId(id) }, { $set: { nombre, precio, fecha_inventario, imagen } });
 
     return Response.json(results);
+    
 }
 
 
